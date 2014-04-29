@@ -5,6 +5,11 @@ Metanoia mining server is the first attempt to implement [Bitmessage](https://bi
 
 **WARNING:** Current version is only an academic proof of concept with a no expectation of an existing threat model. So no HMAC, SSL, zero-knowledge, protocol error codes, ...
 
+## Motivation
+[Reddit: How to provide work as a potential service?](https://pay.reddit.com/r/bitmessage/comments/1fbze6/how_to_provide_work_as_a_potential_service/)
+[Reddit: An alternative to proof of work?](https://pay.reddit.com/r/bitmessage/comments/1q02qc/an_alternative_to_proof_of_work/)
+
+
 ##Requirements
 *Metanoia* is built in Python 2.7.3 using the built-in modules only. It should work with other versions.
 
@@ -17,7 +22,7 @@ Client sends request (*initialHash* is Base64 encoded):
   u'initialHash': u'vSJ95SFzpQ7NVIk/cd5SUR9isX+s8s5mcKJIn4G3Owqk7/yBuTX2KPxTg8RpkO1yJJ0bz7/8/5KMU5BEcjxehw=='
 }
 ```
-Miners periodically calls *get_work* which is implemented as long pooling
+Miners periodically calls *get_work* which is implemented as long pooling:
 ```
 {
   'method':'get_work'

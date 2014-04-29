@@ -95,7 +95,7 @@ class ClientTcpHandler(BaseRequestHandler, BitmessageHandler):
 				# the request is valid JSON
 				self._call_mining_method()
 			except Exception as e:
-				print "Exception while receiving message: ", e
+				logger.exception(e)
 				break
 
 	def _call_mining_method(self):

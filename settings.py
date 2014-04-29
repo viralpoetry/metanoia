@@ -9,5 +9,5 @@ SERVER_SETTINGS = {
 
 # Long pooling timeout in seconds
 QUEUE_SETTINGS = {
-	'TIMEOUT': 5
+	'TIMEOUT': 20
 }
