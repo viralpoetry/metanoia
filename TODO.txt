@@ -1,0 +1,20 @@
+
+# TODO( HAVE TO )
+	- timeout for POW computing... cliend have to be protected against malicious miners
+	- database class
+	- GET_RESULT should awake only one thread
+	- Check work against known information (this have to be optional, because of possible encryption)
+	- Protocol should handle messages of arbitrary size (1024 currently hardcoded!)
+	- JSON communication to some "template" array (or protocol class?)
+	- (?)authentification BITCOMMITMENT
+	- logger
+	- ERROR MESSAGES
+	- POW computation TIMEOUT..
+
+
+
+Bitmessage client
+	- simplest possible communication
+	- authentication, ...
+
+
