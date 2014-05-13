@@ -134,20 +134,21 @@ class bitmessageMiningServer( object ):
 
 
 # blocking service
-def start(object):
-	"""Start mining threaded mining server."""
-	server_process = bitmessageMiningServer(object)
+def start():
+	"""Create queue object and start threaded mining server."""
+	# initialize Queue
+	work_queue = workqueue.WorkQueue()
+	
+	server_process = bitmessageMiningServer(work_queue)
 	server_process.daemon = True
 	server_process.run()
 
 
 # start Bitmessage mining server
 if __name__ == "__main__":
-	# initialize Queue
-	work_queue = workqueue.WorkQueue()
-	
+
 	try:
-		client_server = start(work_queue)
+		client_server = start()
 	except KeyboardInterrupt:
 		raise
 	
