@@ -17,15 +17,15 @@ Metanoia mining server is the first attempt to implement [Bitmessage](https://bi
 Client sends request (*initialHash* is Base64 encoded):
 ```
 {
-  u'method': u'do_pow',
-  u'target': 3979158916983L,
-  u'initialHash': u'vSJ95SFzpQ7NVIk/cd5SUR9isX+s8s5mcKJIn4G3Owqk7/yBuTX2KPxTg8RpkO1yJJ0bz7/8/5KMU5BEcjxehw=='
+  "method": 'do_pow',
+  "target": 3979158916983L,
+  "initialHash": 'vSJ95SFzpQ7NVIk/cd5SUR9isX+s8s5mcKJIn4G3Owqk7/yBuTX2KPxTg8RpkO1yJJ0bz7/8/5KMU5BEcjxehw=='
 }
 ```
 Miners periodically calls *get_work* which is implemented as long pooling:
 ```
 {
-  'method':'get_work'
+  "method":'get_work'
 }
 ```
 
@@ -34,17 +34,17 @@ Miners are awakened, one of them receives a message:
 {
   "status": 200,
   "target": 3979158916983,
-  u'initialHash': u'vSJ95SFzpQ7NVIk/cd5SUR9isX+s8s5mcKJIn4G3Owqk7/yBuTX2KPxTg8RpkO1yJJ0bz7/8/5KMU5BEcjxehw=='
+  "initialHash": 'vSJ95SFzpQ7NVIk/cd5SUR9isX+s8s5mcKJIn4G3Owqk7/yBuTX2KPxTg8RpkO1yJJ0bz7/8/5KMU5BEcjxehw=='
 }
 ```
 
 After computation, miner returns completed work via *push_result* method:
 ```
 {
-  u'method': u'push_result',
-  u'nonce': 1302572,
-  u'trialValue': 799892720325L,
-  u'initialHash': u'vSJ95SFzpQ7NVIk/cd5SUR9isX+s8s5mcKJIn4G3Owqk7/yBuTX2KPxTg8RpkO1yJJ0bz7/8/5KMU5BEcjxehw=='
+  "method": 'push_result',
+  "nonce": 1302572,
+  "trialValue": 799892720325L,
+  "initialHash": 'vSJ95SFzpQ7NVIk/cd5SUR9isX+s8s5mcKJIn4G3Owqk7/yBuTX2KPxTg8RpkO1yJJ0bz7/8/5KMU5BEcjxehw=='
 }
 ```
 
@@ -75,5 +75,5 @@ INFO:__main__:Server started...
 Backup and replace `proofofwork.py` file inside `PyBitmessage\src` directory with one from this repository. Change server address. Enjoy :)
 
 ##Contact
-* BM-2cVD15UyXVELPakkKfYv2Y43QzUnryfmUj
+* BM-NBpiSRBeynPnvynSPjwhWxr1jQB6osRi
 * petergasper [uknowwhat] viralpoetry.org
